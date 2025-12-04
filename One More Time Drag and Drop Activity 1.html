@@ -83,7 +83,7 @@
             text-decoration: underline;
         }
 
-        /* Modal styles */
+        
         .modal {
             display: none; 
             position: fixed;
@@ -108,9 +108,9 @@
             color: #28a745;
         }
         .modal-content p {
-            font-size: 1.5em; /* Larger font size for feedback */
-            color: blue; /* Blue color for feedback */
-            font-family: 'Verdana', sans-serif; /* Different font style */
+            font-size: 1.5em; 
+            color: blue; 
+            font-family: 'Verdana', sans-serif;
         }
         .close-btn {
             padding: 10px 20px;
@@ -129,7 +129,7 @@
 
     <h2>Drag the correct word into the blank spaces:</h2>
 
-    <!-- Video Embedding with Larger Dimensions -->
+    
     <iframe 
         src="https://www.dailymotion.com/embed/video/x8vttjy" 
         width="1240"  
@@ -140,7 +140,7 @@
 
     <div class="container">
         <div class="words" id="wordBank">
-            <!-- Word bank content will be inserted here -->
+            
         </div>
 
         <div class="lyrics">
@@ -164,7 +164,7 @@
         </div>
     </div>
 
-    <!-- Modal Structure -->
+    
     <div id="feedbackModal" class="modal">
         <div class="modal-content">
             <h2 id="score"></h2>
@@ -269,10 +269,10 @@
                 }
             }
 
-            let score = Math.round((correctAnswers / 14) * 100); // Round the score to the nearest whole number
+            let score = Math.round((correctAnswers / 14) * 100); 
             let feedback = "";
 
-            // Determine feedback based on the score
+            
             if (correctAnswers === 14) {
                 feedback = "Fantastic job! Way to go!";
             } else if (correctAnswers >= 10 && correctAnswers <= 13) {
@@ -283,7 +283,7 @@
                 feedback = "Oh man, what happened? You need to try harder!";
             }
 
-            // Show the modal with the score and feedback
+            
             document.getElementById("score").innerHTML = `Score: ${score}%`;
             document.getElementById("feedback").innerHTML = feedback;
             document.getElementById("feedbackModal").style.display = "flex";
